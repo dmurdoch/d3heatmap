@@ -35,3 +35,13 @@ d3heatmap(mtcars, scale = "column", colors = "Spectral")
 You can also include them in R Markdown chunks, or use them in Shiny applications with the `d3heatmapOutput` and `renderD3heatmap` functions.
 
 See `?d3heatmap` for options.
+
+### Compatibility with D3 v 4.x
+
+This package uses version 3.5.3 of the D3 Javascript library.  D3 has
+moved to later incompatible versions, and some R packages exporting 
+HTML widgets (e.g. `networkD3`) use those.  To allow both versions of D3
+to coexist the version in this package has been renamed to `d3_3`.
+A better long term solution would be to update to the same version as
+`networkD3` uses, but this package isn't being maintained, so that's
+unlikely to happen.
